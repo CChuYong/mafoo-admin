@@ -21,30 +21,23 @@ const FooterContent = () => {
       className={classnames(verticalLayoutClasses.footerContent, 'flex items-center justify-between flex-wrap gap-4')}
     >
       <p>
-        <span>{`© ${new Date().getFullYear()}, Made with `}</span>
-        <span>{`❤️`}</span>
-        <span>{` by `}</span>
-        <Link href='https://themeselection.com' target='_blank' className='text-primary'>
-          ThemeSelection
-        </Link>
+        <span>{`© ${new Date().getFullYear()}, Team SpinachPasta`}</span>
       </p>
       {!isBreakpointReached && (
         <div className='flex items-center gap-4'>
-          <Link href='https://themeselection.com/license' target='_blank' className='text-primary'>
-            License
-          </Link>
-          <Link href='https://themeselection.com' target='_blank' className='text-primary'>
-            More Themes
-          </Link>
-          <Link href={process.env.NEXT_PUBLIC_DOCS_URL as string} target='_blank' className='text-primary'>
-            Documentation
-          </Link>
           <Link
-            href={`https://github.com/themeselection/${process.env.NEXT_PUBLIC_REPO_NAME}/issues`}
+            href={`https://mafoo.kr`}
             target='_blank'
             className='text-primary'
           >
-            Support
+            Mafoo-Main
+          </Link>
+          <Link
+            href={`https://github.com/CChuYong/mafoo-admin`}
+            target='_blank'
+            className='text-primary'
+          >
+            GitHub
           </Link>
         </div>
       )}
