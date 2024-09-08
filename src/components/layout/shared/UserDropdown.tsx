@@ -1,7 +1,7 @@
 'use client'
 
 // React Imports
-import { useEffect, useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import type { MouseEvent } from 'react'
 
 // MUI Imports
@@ -34,7 +34,7 @@ const UserDropdown = () => {
   const [open, setOpen] = useState(false)
 
   const session = useSession();
-  
+
   // Refs
   const anchorRef = useRef<HTMLDivElement>(null)
 
