@@ -34,11 +34,7 @@ const UserDropdown = () => {
   const [open, setOpen] = useState(false)
 
   const session = useSession();
-
-  useEffect(() => {
-    console.log(session.data?.user?.image);
-  }, [])
-
+  
   // Refs
   const anchorRef = useRef<HTMLDivElement>(null)
 
