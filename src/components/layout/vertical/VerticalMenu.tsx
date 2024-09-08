@@ -70,12 +70,15 @@ const VerticalMenu = ({ scrollMenu }: { scrollMenu: (container: any, isPerfectSc
         </SubMenu>
         <MenuSection label='Photos & Albums'>
           <MenuItem href='/albums' icon={<i className='ri-gallery-line' />}>
-            Album List
+            전체 앨범 목록
+          </MenuItem>
+          <MenuItem href='/upload-images' icon={<i className='ri-upload-2-line' />}>
+            사용자 이미지 업로드
           </MenuItem>
         </MenuSection>
         <MenuSection label='Members'>
           <MenuItem href='/form-layouts' icon={<i className='ri-user-3-line' />}>
-            Member List
+            전체 사용자 목록
           </MenuItem>
           <MenuItem href='/account-settings' icon={<i className='ri-user-settings-line' />}>
             Account Settings
