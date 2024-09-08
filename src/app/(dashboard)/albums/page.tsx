@@ -42,7 +42,7 @@ const FormLayouts = () => {
     const queryParam = rawQueryOptions ? ('&' + rawQueryOptions.map(item => `${item.field}=${item.value}`).join('&')) : '';
 
     instance
-      .get(`/v1/admin/albums?page=${paginationModel.page}&size=${paginationModel.pageSize}${queryParam}`)
+      .get(`/photo/v1/admin/albums?page=${paginationModel.page}&size=${paginationModel.pageSize}${queryParam}`)
       .then((res) => {
         const data = res.data
 
