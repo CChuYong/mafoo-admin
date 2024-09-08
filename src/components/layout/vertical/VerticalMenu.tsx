@@ -62,13 +62,13 @@ const VerticalMenu = ({ scrollMenu }: { scrollMenu: (container: any, isPerfectSc
         menuSectionStyles={menuSectionStyles(theme)}
       >
         <SubMenu
-          label='Dashboards'
+          label='대시보드'
           icon={<i className='ri-home-smile-line' />}
           suffix={<Chip label='5' size='small' color='error' />}
         >
           <MenuItem href='/'>Analytics</MenuItem>
         </SubMenu>
-        <MenuSection label='Photos & Albums'>
+        <MenuSection label='사진 & 앨범 관련'>
           <MenuItem href='/albums' icon={<i className='ri-gallery-line' />}>
             전체 앨범 목록
           </MenuItem>
@@ -76,12 +76,9 @@ const VerticalMenu = ({ scrollMenu }: { scrollMenu: (container: any, isPerfectSc
             사용자 이미지 업로드
           </MenuItem>
         </MenuSection>
-        <MenuSection label='Members'>
+        <MenuSection label='사용자 관련'>
           <MenuItem href='/form-layouts' icon={<i className='ri-user-3-line' />}>
             전체 사용자 목록
-          </MenuItem>
-          <MenuItem href='/account-settings' icon={<i className='ri-user-settings-line' />}>
-            Account Settings
           </MenuItem>
         </MenuSection>
       </Menu>

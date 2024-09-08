@@ -47,6 +47,10 @@ const FormLayouts = () => {
       formData.append('files', coverPhotos[i]);
     }
 
+    setMemberId('');
+    setAlbumName('');
+    setcoverPhotos([]);
+
     const result = await instance.post<any[]>('/v1/users/upload-image-with-new-album', formData, {
       headers: {
         'Content-Type': 'multipart/form-data',
