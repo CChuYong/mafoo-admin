@@ -72,6 +72,9 @@ const VerticalMenu = ({ scrollMenu }: { scrollMenu: (container: any, isPerfectSc
           <MenuItem href='/albums' icon={<i className='ri-gallery-line' />}>
             전체 앨범 목록
           </MenuItem>
+          <MenuItem href='/photos' icon={<i className='ri-image-2-line' />}>
+            전체 사진 목록
+          </MenuItem>
           <MenuItem href='/upload-images' icon={<i className='ri-upload-2-line' />}>
             사용자 이미지 업로드
           </MenuItem>
