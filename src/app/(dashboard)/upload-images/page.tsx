@@ -63,10 +63,12 @@ const FormLayouts = () => {
       alert(`총 ${result.data.length}개의 이미지가 업로드되었어요!`);
     } catch(e: any) {
       if(e instanceof AxiosError) {
-        if(e.response?.data) {
-          alert(e.response?.data.message);
-        } else {
+        if(e.response?.data?.message) {
+          alert(e.response?.data?.message);
+        } else if(e.response?.data) {
           alert(e.response?.data)
+        } else {
+          alert('알 수 없는 오류가 발생했어요! (code: ' + e?.response?.status + ')');
         }
       } else {
         alert('알 수 없는 오류가 발생했어요!');
