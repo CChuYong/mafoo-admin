@@ -10,6 +10,8 @@ import Typography from '@mui/material/Typography'
 
 import TextField from '@mui/material/TextField'
 
+import {AxiosError} from "axios";
+
 import FileField from '@components/FileField'
 import instance from '@/utils/axios'
 
@@ -51,13 +53,25 @@ const FormLayouts = () => {
     setAlbumName('');
     setcoverPhotos([]);
 
-    const result = await instance.post<any[]>('/admin/v1/users/upload-image-with-new-album', formData, {
-      headers: {
-        'Content-Type': 'multipart/form-data',
-      },
-    })
+    try {
+      const result = await instance.post<any[]>('/admin/v1/users/upload-image-with-new-album', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      });
 
-    alert(`총 ${result.data.length}개의 이미지가 업로드되었어요!`);
+      alert(`총 ${result.data.length}개의 이미지가 업로드되었어요!`);
+    } catch(e: any) {
+      if(e instanceof AxiosError) {
+        if(e.response?.data) {
+          alert(e.response?.data.message);
+        } else {
+          alert(e.response?.data)
+        }
+      } else {
+        alert('알 수 없는 오류가 발생했어요!');
+      }
+    }
   };
 
 return (
