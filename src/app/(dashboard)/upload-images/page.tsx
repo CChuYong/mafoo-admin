@@ -55,7 +55,7 @@ const FormLayouts = () => {
 
     try {
       const result = await instance.post<any[]>('/admin/v1/users/upload-image-with-new-album', formData, {
-        timeout: 1000 * 30,
+        timeout: 1000 * 120,
         headers: {
           'Content-Type': 'multipart/form-data',
         },
